@@ -34,9 +34,11 @@
 }
 
 .card {
-  padding: 2em;
+  justify-content: space-between;
 }
 
-.read-the-docs {
-  color: #888;
+.product {
+  flex: 1 1 21%; /* Adjust the percentage to control the width */
+  box-sizing: border-box;
+  margin: 10px 0; /* Adjust margin as needed */
 }
