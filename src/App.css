@@ -1,8 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
 #root {
   max-width: 1620px;
   margin: 0 auto;
-  padding: 6rem;
   text-align: center;
+  padding: 40px;
+}
+
+body {
+  font-family: "Rajdhani";
+  background-color: #232323;
+  color: #fff;
 }
 
 .logo {

@@ -52,8 +52,8 @@ function App() {
   return (
     <>
       <div className="card items-center" id="start">
-        <h1 className="text-4xl">Elon Musk’s net worth is:</h1>
-        <h1 className="text-green-500 font-semibold p-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold">Elon Musk’s net worth is:</h1>
+        <h1 className="text-green-500 font-semibold p-4 text-3xl md:text-6xl lg:text-7xl">
           ${formatNumberWithCommas(totalDamage)}
         </h1>
         <p className="p-2">
@@ -66,10 +66,10 @@ function App() {
         <p className="">with total of {totalProducts} products</p>
       </div>
 
-      <div className="card xl:flex gap-x-6 xl:gap-x-10 text-center">
+      <div className="card grid md:grid-cols-2 lg:grid-cols-3 xl:flex gap-x-6 xl:gap-x-10 text-center">
         {/* 1st Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-4xl xl:text-2xl">
+          <h1 className="m-4 text-2xl xl:text-2xl">
             Gulfstream G650ER Jet Aircraft
           </h1>
           <img
@@ -111,7 +111,7 @@ function App() {
 
         {/* Second Product */}
         <div className="product flex flex-col items-center mt-10 m-4">
-          <h1 className="m-4 text-4xl xl:text-2xl">
+          <h1 className="m-4 text-2xl xl:text-2xl">
             Patek Philippe Grandmaster Chime
           </h1>
           <img
@@ -152,7 +152,7 @@ function App() {
 
         {/* Third Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-4xl xl:text-2xl">
+          <h1 className="m-4 text-2xl xl:text-2xl">
             Lamborghini Veneno Roadster 2013
           </h1>
           <img
@@ -194,7 +194,7 @@ function App() {
 
         {/* 4th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-4xl xl:text-2xl">
+          <h1 className="m-4 text-2xl xl:text-2xl">
             Karambit Case Hardened Seed / Pattern: 387
           </h1>
           <img
@@ -238,7 +238,7 @@ function App() {
       <div className="card xl:flex gap-x-6 xl:gap-x-10 text-center p-4 ">
         {/* 5th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-4xl xl:text-2xl">AZZAM Yacht</h1>
+          <h1 className="m-4 text-2xl xl:text-2xl">AZZAM Yacht</h1>
           <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
           <p className="pb-4">
             Emir of Abu Dhabi private superyacht, built by German shipyard
@@ -274,7 +274,7 @@ function App() {
 
         {/* 6th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-4xl xl:text-2xl">AZZAM Yacht</h1>
+          <h1 className="m-4 text-2xl xl:text-2xl">AZZAM Yacht</h1>
           <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
           <p className="pb-4">
             Emir of Abu Dhabi private superyacht, built by German shipyard
@@ -310,7 +310,7 @@ function App() {
 
         {/* 7th Product */}
          <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-4xl xl:text-2xl">AZZAM Yacht</h1>
+          <h1 className="m-4 text-2xl xl:text-2xl">AZZAM Yacht</h1>
           <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
           <p className="pb-4">
             Emir of Abu Dhabi private superyacht, built by German shipyard
@@ -346,7 +346,7 @@ function App() {
 
         {/* 8th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-4xl xl:text-2xl">AZZAM Yacht</h1>
+          <h1 className="m-4 text-2xl xl:text-2xl">AZZAM Yacht</h1>
           <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
           <p className="pb-4">
             Emir of Abu Dhabi private superyacht, built by German shipyard
