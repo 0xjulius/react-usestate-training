@@ -1,8 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import Img1 from "./img/img1.webp";
-import Img2 from "./img/img2.webp"; // Import the second product image
-import Img3 from "./img/img3.webp"; // Import the third product image
+import Img1 from "./img/img1.jpg";
+import Img2 from "./img/img2.jpg";
+import Img3 from "./img/img3.jpg";
+import Img4 from "./img/img4.jpg";
+import Img5 from "./img/img5.jpg";
+
 import { FaGithub } from "react-icons/fa";
 
 function App() {
@@ -15,11 +18,11 @@ function App() {
   const [count6, setCount6] = useState(0);
   const [count7, setCount7] = useState(0);
   const [count8, setCount8] = useState(0);
-  const productPrice1 = (189.9).toFixed(2);
-  const productPrice2 = (99.9).toFixed(2);
-  const productPrice3 = (149.9).toFixed(2);
-  const productPrice4 = (189.9).toFixed(2);
-  const productPrice5 = (99.9).toFixed(2);
+  const productPrice1 = (49995000).toFixed(2);
+  const productPrice2 = (2800000).toFixed(2);
+  const productPrice3 = (4000000).toFixed(2);
+  const productPrice4 = (1500000).toFixed(2);
+  const productPrice5 = (60500000).toFixed(2);
   const productPrice6 = (149.9).toFixed(2);
   const productPrice7 = (189.9).toFixed(2);
   const productPrice8 = (99.9).toFixed(2);
@@ -43,9 +46,8 @@ function App() {
     return number.toLocaleString();
   };
 
-const totalProducts = (
-  count1 + count2 + count3 + count4 + count5 + count6 + count7 + count8
-);
+  const totalProducts =
+    count1 + count2 + count3 + count4 + count5 + count6 + count7 + count8;
 
   return (
     <>
@@ -64,13 +66,23 @@ const totalProducts = (
         <p className="">with total of {totalProducts} products</p>
       </div>
 
-      <div className="card xl:flex gap-x-6 xl:gap-x-10 text-center p-4 ">
+      <div className="card xl:flex gap-x-6 xl:gap-x-10 text-center">
         {/* 1st Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="p-8 text-4xl xl:text-2xl">Tuote 1</h1>
-          <img src={Img2} alt="Moderni hiiligrilli" className="w-1/2 pb-8" />
-          <div className="card2"><span className="font-semibold text-xl"></span>
-            Price:{" "}
+          <h1 className="m-4 text-4xl xl:text-2xl">
+            Gulfstream G650ER Jet Aircraft
+          </h1>
+          <img
+            src={Img1}
+            alt="Gulfstream G650ER"
+            className="w-full md:w-1/2 m-2"
+          />
+
+          <p className="pb-4">
+            The most fastest ultra-long-range business jet in the world.
+          </p>
+          <div className="card2">
+            <span className="font-semibold text-xl">Price: </span>
             <span className="font-semibold text-xl">${productPrice1}</span>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
@@ -98,9 +110,18 @@ const totalProducts = (
         </div>
 
         {/* Second Product */}
-        <div className="product flex flex-col items-center mt-10">
-          <h1 className="p-8 text-4xl xl:text-2xl">Tuote 2</h1>
-          <img src={Img2} alt="Moderni hiiligrilli" className="w-1/2 pb-8" />
+        <div className="product flex flex-col items-center mt-10 m-4">
+          <h1 className="m-4 text-4xl xl:text-2xl">
+            Patek Philippe Grandmaster Chime
+          </h1>
+          <img
+            src={Img2}
+            alt="Patek Philippe Grandmaster Chime"
+            className="w-1/2 m-2"
+          />
+          <p className="pb-4">
+            The most complicated Patek Philippe wristwatch ever-made.
+          </p>
           <div className="card2">
             Hinta:{" "}
             <span className="font-semibold text-xl">{productPrice2}</span> €
@@ -131,12 +152,18 @@ const totalProducts = (
 
         {/* Third Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="p-8 text-4xl xl:text-2xl">Tuote 3</h1>
+          <h1 className="m-4 text-4xl xl:text-2xl">
+            Lamborghini Veneno Roadster 2013
+          </h1>
           <img
             src={Img3}
-            alt="Kevyt kannettava grillipöytä"
-            className="w-1/2 pb-8"
+            alt="Lamborghini Veneno Roadster"
+            className="w-1/2 m-2"
           />
+          <p className="pb-4">
+            Limited edition supercar made by Lamborghini for its 50th
+            anniversary in 2013.
+          </p>
           <div className="card2">
             Hinta:{" "}
             <span className="font-semibold text-xl">{productPrice3}</span> €
@@ -167,12 +194,18 @@ const totalProducts = (
 
         {/* 4th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="p-8 text-4xl xl:text-2xl">Tuote 4</h1>
+          <h1 className="m-4 text-4xl xl:text-2xl">
+            Karambit Case Hardened Seed / Pattern: 387
+          </h1>
           <img
-            src={Img3}
-            alt="Kevyt kannettava grillipöytä"
-            className="w-1/2 pb-8"
+            src={Img4}
+            alt="Karambit Blue Gem Seed / Pattern: 387"
+            className="w-1/2 m-2"
           />
+          <p className="pb-4">
+            The #1 ‘387’ pattern 'Blue Gem' - Most valuable and rare skin in
+            CS2.{" "}
+          </p>
           <div className="card2">
             Hinta:{" "}
             <span className="font-semibold text-xl">{productPrice4}</span> €
@@ -205,8 +238,12 @@ const totalProducts = (
       <div className="card xl:flex gap-x-6 xl:gap-x-10 text-center p-4 ">
         {/* 5th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="p-8 text-4xl xl:text-2xl">Tuote 5</h1>
-          <img src={Img2} alt="Moderni hiiligrilli" className="w-1/2 pb-8" />
+          <h1 className="m-4 text-4xl xl:text-2xl">AZZAM Yacht</h1>
+          <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
+          <p className="pb-4">
+            Emir of Abu Dhabi private superyacht, built by German shipyard
+            Lürssen Yachts.
+          </p>
           <div className="card2">
             Hinta:{" "}
             <span className="font-semibold text-xl">{productPrice5}</span> €
@@ -237,8 +274,12 @@ const totalProducts = (
 
         {/* 6th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="p-8 text-4xl xl:text-2xl">Tuote 6</h1>
-          <img src={Img2} alt="Moderni hiiligrilli" className="w-1/2 pb-8" />
+          <h1 className="m-4 text-4xl xl:text-2xl">AZZAM Yacht</h1>
+          <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
+          <p className="pb-4">
+            Emir of Abu Dhabi private superyacht, built by German shipyard
+            Lürssen Yachts.
+          </p>
           <div className="card2">
             Hinta:{" "}
             <span className="font-semibold text-xl">{productPrice6}</span> €
@@ -250,7 +291,7 @@ const totalProducts = (
             >
               -
             </button>
-            <span className="text-xl pt-2 ">{count6}</span>
+            <span className="text-xl pt-2">{count6}</span>
             <button
               className="rounded-md"
               onClick={() => setCount6((count6) => count6 + 1)}
@@ -268,13 +309,13 @@ const totalProducts = (
         </div>
 
         {/* 7th Product */}
-        <div className="product flex flex-col items-center mt-10">
-          <h1 className="p-8 text-4xl xl:text-2xl">Tuote 7</h1>
-          <img
-            src={Img3}
-            alt="Kevyt kannettava grillipöytä"
-            className="w-1/2 pb-8"
-          />
+         <div className="product flex flex-col items-center mt-10">
+          <h1 className="m-4 text-4xl xl:text-2xl">AZZAM Yacht</h1>
+          <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
+          <p className="pb-4">
+            Emir of Abu Dhabi private superyacht, built by German shipyard
+            Lürssen Yachts.
+          </p>
           <div className="card2">
             Hinta:{" "}
             <span className="font-semibold text-xl">{productPrice7}</span> €
@@ -305,12 +346,12 @@ const totalProducts = (
 
         {/* 8th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="p-8 text-4xl xl:text-2xl">Tuote 8</h1>
-          <img
-            src={Img3}
-            alt="Kevyt kannettava grillipöytä"
-            className="w-1/2 pb-8"
-          />
+          <h1 className="m-4 text-4xl xl:text-2xl">AZZAM Yacht</h1>
+          <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
+          <p className="pb-4">
+            Emir of Abu Dhabi private superyacht, built by German shipyard
+            Lürssen Yachts.
+          </p>
           <div className="card2">
             Hinta:{" "}
             <span className="font-semibold text-xl">{productPrice8}</span> €
@@ -341,13 +382,13 @@ const totalProducts = (
       </div>
 
       <p className="pt-12 text-lg text-gray-400">
-      This project is just for fun and practice. It's a playful way to learn useState in React, style things up with Tailwind CSS, and set it all up with Vite.
-
-The products, prices, and everything else you see here are totally made up. They're not real and are just for giggles.
-
-No actual buying or selling happens here, and no real money's involved. It's all just for learning and experimenting.
-
-Enjoy poking around, and remember — it's all in good fun!
+        This project is just for fun and practice. It's a playful way to learn
+        useState in React, style things up with Tailwind CSS, and set it all up
+        with Vite. The products, prices, and everything else you see here are
+        totally made up. They're not real and are just for giggles. No actual
+        buying or selling happens here, and no real money's involved. It's all
+        just for learning and experimenting. Enjoy poking around, and remember —
+        it's all in good fun!
       </p>
 
       <footer className="mt-10 text-white flex items-center justify-center">

@@ -80,3 +80,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.product img {
+  width: 100%; /* Default width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Fill container while maintaining aspect ratio */
+  transition: transform 0.2s ease; /* Smooth transition for zoom effect */
+}
