@@ -2,7 +2,7 @@
 Simple online store test with one random product.
 
 Website live:
-[https://usestate-training-livid.vercel.app](https://usestate-training-livid.vercel.app)
+[https://shopwithelon.vercel.app](https:/shopwithelon.vercel.app)
 
 Key learnings from this small project:
 * <b>React State Management:</b> Utilizing useState to manage state within functional components, enabling dynamic user interaction.
