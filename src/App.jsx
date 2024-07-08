@@ -60,7 +60,7 @@ function App() {
 
   return (
     <>
-      <div className="sticky top-0 z-10 bg-[#232323]">
+      <div className="sticky-div top-0 z-10 bg-[#232323]">
         <div className="card items-center p-4" id="start">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold">
             Elon Musk’s net worth is:

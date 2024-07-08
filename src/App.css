@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
 
 #root {
-  max-width: 1620px;
+  max-width: 90%;
   margin: 0 auto;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px;
+  overflow-x: clip; /* todella vaikee case stickydiv + overflow-x disable*/
 }
 
 body {
@@ -21,7 +22,11 @@ body {
   width: 600px;
 }
 
-
+.sticky-div {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 .product-text {
   height: 30px;
   max-width: 300px;
@@ -47,7 +52,7 @@ body {
 }
 
 .product img {
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   object-fit: cover; /* Fill container while maintaining aspect ratio */
   transition: transform 0.2s ease; /* Smooth transition for zoom effect */
 }
