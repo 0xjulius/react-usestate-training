@@ -5,6 +5,10 @@ import Img2 from "./img/img2.jpg";
 import Img3 from "./img/img3.jpg";
 import Img4 from "./img/img4.jpg";
 import Img5 from "./img/img5.jpg";
+import Img6 from "./img/img6.jpg";
+import Img7 from "./img/img7.jpg";
+import Img8 from "./img/img8.jpg";
+import Img9 from "./img/img9.jpg";
 
 import { FaGithub } from "react-icons/fa";
 
@@ -18,14 +22,16 @@ function App() {
   const [count6, setCount6] = useState(0);
   const [count7, setCount7] = useState(0);
   const [count8, setCount8] = useState(0);
+  const [count9, setCount9] = useState(0);
   const productPrice1 = (49995000).toFixed(2);
   const productPrice2 = (2800000).toFixed(2);
   const productPrice3 = (4000000).toFixed(2);
   const productPrice4 = (1500000).toFixed(2);
   const productPrice5 = (60500000).toFixed(2);
-  const productPrice6 = (149.9).toFixed(2);
-  const productPrice7 = (189.9).toFixed(2);
-  const productPrice8 = (99.9).toFixed(2);
+  const productPrice6 = (20000000).toFixed(2);
+  const productPrice7 = (5511500).toFixed(2);
+  const productPrice8 = (8000000).toFixed(2);
+  const productPrice9 = (440000000).toFixed(2);
 
   const totalPrice = (
     count1 * productPrice1 +
@@ -35,54 +41,61 @@ function App() {
     count5 * productPrice5 +
     count6 * productPrice6 +
     count7 * productPrice7 +
-    count8 * productPrice8
+    count8 * productPrice8 +
+    count9 * productPrice9 
   ).toFixed(2);
 
   const totalDamage = (count0 - totalPrice)
     .toFixed(2)
-    .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
   const formatNumberWithCommas = (number) => {
     return number.toLocaleString();
   };
 
+  const totalPriceFormatted = totalPrice.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
   const totalProducts =
-    count1 + count2 + count3 + count4 + count5 + count6 + count7 + count8;
+    count1 + count2 + count3 + count4 + count5 + count6 + count7 + count8 + count9;
 
   return (
     <>
-      <div className="card items-center" id="start">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold">Elon Musk’s net worth is:</h1>
-        <h1 className="text-green-500 font-semibold p-4 text-3xl md:text-6xl lg:text-7xl">
-          ${formatNumberWithCommas(totalDamage)}
-        </h1>
-        <p className="p-2">
-          And your job is to bankrupt him by adding as many products as you can
-          into his shopping cart.
-        </p>
-        <p></p>
+      <div className="sticky top-0 z-10 bg-[#232323]">
+        <div className="card items-center p-4 justify-items-center" id="start">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold">
+            Elon Musk’s net worth is:
+          </h1>
+          <h1 className="text-green-500 font-semibold p-4 text-3xl md:text-6xl lg:text-7xl">
+            ${formatNumberWithCommas(totalDamage)}
+          </h1>
+          <p className="p-4 text-center">
+            And your job is to bankrupt him by adding as many products as you
+            can into his shopping cart.
+          </p>
+        </div>
+      </div>
+      <div className="card items-center p-4 justify-items-center">
         <h1 className="text-2xl pt-10">Your total damage for his wallet is:</h1>
-        <h1 className="text-red-500 font-semibold"> ${totalPrice}</h1>
-        <p className="">with total of {totalProducts} products</p>
+        <h1 className="text-red-500 font-semibold text-3xl pt-4">
+          {" "}
+          ${totalPriceFormatted}
+        </h1>
+        <p className="pt-4">with total of {totalProducts} products</p>
       </div>
 
-      <div className="card grid md:grid-cols-2 lg:grid-cols-3 xl:flex gap-x-6 xl:gap-x-10 text-center">
+      <div className="card grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 xl:gap-x-10 text-center">
         {/* 1st Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-2xl xl:text-2xl">
+          <h1 className="product-title m-4 text-xl">
             Gulfstream G650ER Jet Aircraft
           </h1>
-          <img
-            src={Img1}
-            alt="Gulfstream G650ER"
-            className="w-full md:w-1/2 m-2"
-          />
+          <img src={Img1} alt="Gulfstream G650ER" className="w-full m-2" />
 
-          <p className="pb-4">
+          <p className="pb-4 product-text">
             The most fastest ultra-long-range business jet in the world.
           </p>
           <div className="card2">
-            <span className="font-semibold text-xl">Price: </span>
+            <span className="">Price: </span>
             <span className="font-semibold text-xl">${productPrice1}</span>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
@@ -110,21 +123,21 @@ function App() {
         </div>
 
         {/* Second Product */}
-        <div className="product flex flex-col items-center mt-10 m-4">
-          <h1 className="m-4 text-2xl xl:text-2xl">
+        <div className="product flex flex-col items-center mt-10">
+          <h1 className="product-title m-4 text-xl">
             Patek Philippe Grandmaster Chime
           </h1>
           <img
             src={Img2}
             alt="Patek Philippe Grandmaster Chime"
-            className="w-1/2 m-2"
+            className="w-full m-2"
           />
-          <p className="pb-4">
+          <p className="pb-4 product-text">
             The most complicated Patek Philippe wristwatch ever-made.
           </p>
           <div className="card2">
-            Hinta:{" "}
-            <span className="font-semibold text-xl">{productPrice2}</span> €
+            Price:{" "}
+            <span className="font-semibold text-xl">${productPrice2}</span>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
             <button
@@ -152,21 +165,21 @@ function App() {
 
         {/* Third Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-2xl xl:text-2xl">
+          <h1 className="product-title m-4 text-xl">
             Lamborghini Veneno Roadster 2013
           </h1>
           <img
             src={Img3}
             alt="Lamborghini Veneno Roadster"
-            className="w-1/2 m-2"
+            className="w-full m-2"
           />
-          <p className="pb-4">
+          <p className="pb-4 product-text">
             Limited edition supercar made by Lamborghini for its 50th
             anniversary in 2013.
           </p>
           <div className="card2">
-            Hinta:{" "}
-            <span className="font-semibold text-xl">{productPrice3}</span> €
+          <span className="">Price: </span>
+            <span className="font-semibold text-xl">${productPrice3}</span>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
             <button
@@ -194,21 +207,21 @@ function App() {
 
         {/* 4th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-2xl xl:text-2xl">
+          <h1 className="product-title m-4 text-xl">
             Karambit Case Hardened Seed / Pattern: 387
           </h1>
           <img
             src={Img4}
             alt="Karambit Blue Gem Seed / Pattern: 387"
-            className="w-1/2 m-2"
+            className="w-full m-2"
           />
-          <p className="pb-4">
+          <p className="pb-4 product-text">
             The #1 ‘387’ pattern 'Blue Gem' - Most valuable and rare skin in
             CS2.{" "}
           </p>
           <div className="card2">
-            Hinta:{" "}
-            <span className="font-semibold text-xl">{productPrice4}</span> €
+          <span className="">Price: </span>
+            <span className="font-semibold text-xl">${productPrice4}</span>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
             <button
@@ -233,20 +246,17 @@ function App() {
             <p className="price">( {count4} items )</p>
           </p>
         </div>
-      </div>
 
-      <div className="card xl:flex gap-x-6 xl:gap-x-10 text-center p-4 ">
         {/* 5th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-2xl xl:text-2xl">AZZAM Yacht</h1>
-          <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
-          <p className="pb-4">
-            Emir of Abu Dhabi private superyacht, built by German shipyard
-            Lürssen Yachts.
+          <h1 className="product-title m-4 text-xl">AZZAM Yacht</h1>
+          <img src={Img5} alt="AZZAM" className="w-full m-2" />
+          <p className="pb-4 product-text">
+          The longest Emir of Abu Dhabi superyacht in the world, with a length of 180 meters.
           </p>
           <div className="card2">
-            Hinta:{" "}
-            <span className="font-semibold text-xl">{productPrice5}</span> €
+          <span className="">Price: </span>
+            <span className="font-semibold text-xl">${productPrice5}</span>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
             <button
@@ -274,15 +284,14 @@ function App() {
 
         {/* 6th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-2xl xl:text-2xl">AZZAM Yacht</h1>
-          <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
-          <p className="pb-4">
-            Emir of Abu Dhabi private superyacht, built by German shipyard
-            Lürssen Yachts.
+          <h1 className="product-title m-4 text-xl">AgustaWestland AW101</h1>
+          <img src={Img6} alt="AW101" className="w-full m-2" />
+          <p className="pb-4 product-text">
+          Medium-lift helicopter designed for military and civil operations.
           </p>
           <div className="card2">
-            Hinta:{" "}
-            <span className="font-semibold text-xl">{productPrice6}</span> €
+            Price:{" "}
+            <span className="font-semibold text-xl">${productPrice6}</span>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
             <button
@@ -309,16 +318,15 @@ function App() {
         </div>
 
         {/* 7th Product */}
-         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-2xl xl:text-2xl">AZZAM Yacht</h1>
-          <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
-          <p className="pb-4">
-            Emir of Abu Dhabi private superyacht, built by German shipyard
-            Lürssen Yachts.
+        <div className="product flex flex-col items-center mt-10">
+          <h1 className="product-title m-4 text-xl">The Rockefeller Emerald</h1>
+          <img src={Img7} alt="AZZAM" className="w-full m-2" />
+          <p className="pb-4 product-text">
+          The most expensive 18.04-carat octagonal step-cut Colombian emerald.
           </p>
           <div className="card2">
-            Hinta:{" "}
-            <span className="font-semibold text-xl">{productPrice7}</span> €
+           Price:{" "}
+            <span className="font-semibold text-xl">${productPrice7}</span>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
             <button
@@ -346,15 +354,14 @@ function App() {
 
         {/* 8th Product */}
         <div className="product flex flex-col items-center mt-10">
-          <h1 className="m-4 text-2xl xl:text-2xl">AZZAM Yacht</h1>
-          <img src={Img5} alt="AZZAM" className="w-1/2 m-2" />
-          <p className="pb-4">
-            Emir of Abu Dhabi private superyacht, built by German shipyard
-            Lürssen Yachts.
+          <h1 className="product-title m-4 text-xl">Mercedes-Benz Maybach Exelero</h1>
+          <img src={Img8} alt="MB" className="w-full m-2" />
+          <p className="pb-4 product-text">
+One of the most expensive high-performance sports cars with top speed of 351 km/h.
           </p>
           <div className="card2">
-            Hinta:{" "}
-            <span className="font-semibold text-xl">{productPrice8}</span> €
+            Price:{" "}
+            <span className="font-semibold text-xl">${productPrice8}</span>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
             <button
@@ -377,6 +384,41 @@ function App() {
               {(count8 * productPrice8).toFixed(2)} USD
             </span>
             <p className="price">( {count8} items )</p>
+          </p>
+        </div>
+
+        {/* 9th Product */}
+        <div className="product flex flex-col items-center mt-10">
+          <h1 className="product-title m-4 text-xl">Odeon Tower Penthouse, Monaco</h1>
+          <img src={Img9} alt="ODEON" className="w-full m-2" />
+          <p className="pb-4 product-text-lg">
+          The most expensive penthouses in the world with a health center, and its extreme luxury and services.
+          </p>
+          <div className="card2">
+            Price:{" "}
+            <span className="font-semibold text-xl">${productPrice9}</span>
+          </div>
+          <div className="flex justify-center space-x-4 mt-4">
+            <button
+              className="rounded-md"
+              onClick={() => setCount9((count9) => Math.max(count9 - 1, 0))}
+            >
+              -
+            </button>
+            <span className="text-xl pt-2">{count9}</span>
+            <button
+              className="rounded-md"
+              onClick={() => setCount9((count9) => count9 + 1)}
+            >
+              +
+            </button>
+          </div>
+          <p>
+            total:{" "}
+            <span className="font-semibold text-xl text-green-500">
+              {(count9 * productPrice9).toFixed(2)} USD
+            </span>
+            <p className="price">( {count9} items )</p>
           </p>
         </div>
       </div>
