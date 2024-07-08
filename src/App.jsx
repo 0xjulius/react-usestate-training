@@ -61,14 +61,14 @@ function App() {
   return (
     <>
       <div className="sticky top-0 z-10 bg-[#232323]">
-        <div className="card items-center p-4 justify-items-center" id="start">
+        <div className="card items-center p-4" id="start">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold">
             Elon Musk’s net worth is:
           </h1>
           <h1 className="text-green-500 font-semibold p-4 text-3xl md:text-6xl lg:text-7xl">
             ${formatNumberWithCommas(totalDamage)}
           </h1>
-          <p className="p-4 text-center">
+          <p className="text-center mx-20">
             And your job is to bankrupt him by adding as many products as you
             can into his shopping cart.
           </p>
@@ -89,7 +89,7 @@ function App() {
           <h1 className="product-title m-4 text-xl">
             Gulfstream G650ER Jet Aircraft
           </h1>
-          <img src={Img1} alt="Gulfstream G650ER" className="w-full m-2" />
+          <img src={Img1} alt="Gulfstream G650ER" className="w-2/3 md:w-full m-2" />
 
           <p className="pb-4 product-text">
             The most fastest ultra-long-range business jet in the world.
@@ -130,7 +130,7 @@ function App() {
           <img
             src={Img2}
             alt="Patek Philippe Grandmaster Chime"
-            className="w-full m-2"
+            className="w-2/3 md:w-full m-2"
           />
           <p className="pb-4 product-text">
             The most complicated Patek Philippe wristwatch ever-made.
@@ -171,7 +171,7 @@ function App() {
           <img
             src={Img3}
             alt="Lamborghini Veneno Roadster"
-            className="w-full m-2"
+            className="w-2/3 md:w-full m-2"
           />
           <p className="pb-4 product-text">
             Limited edition supercar made by Lamborghini for its 50th
@@ -213,7 +213,7 @@ function App() {
           <img
             src={Img4}
             alt="Karambit Blue Gem Seed / Pattern: 387"
-            className="w-full m-2"
+            className="w-2/3 md:w-full m-2"
           />
           <p className="pb-4 product-text">
             The #1 ‘387’ pattern 'Blue Gem' - Most valuable and rare skin in
@@ -250,7 +250,7 @@ function App() {
         {/* 5th Product */}
         <div className="product flex flex-col items-center mt-10">
           <h1 className="product-title m-4 text-xl">AZZAM Yacht</h1>
-          <img src={Img5} alt="AZZAM" className="w-full m-2" />
+          <img src={Img5} alt="AZZAM" className="w-2/3 md:w-full m-2" />
           <p className="pb-4 product-text">
           The longest Emir of Abu Dhabi superyacht in the world, with a length of 180 meters.
           </p>
@@ -285,7 +285,7 @@ function App() {
         {/* 6th Product */}
         <div className="product flex flex-col items-center mt-10">
           <h1 className="product-title m-4 text-xl">AgustaWestland AW101</h1>
-          <img src={Img6} alt="AW101" className="w-full m-2" />
+          <img src={Img6} alt="AW101" className="w-2/3 md:w-full m-2" />
           <p className="pb-4 product-text">
           Medium-lift helicopter designed for military and civil operations.
           </p>
@@ -320,7 +320,7 @@ function App() {
         {/* 7th Product */}
         <div className="product flex flex-col items-center mt-10">
           <h1 className="product-title m-4 text-xl">The Rockefeller Emerald</h1>
-          <img src={Img7} alt="AZZAM" className="w-full m-2" />
+          <img src={Img7} alt="AZZAM" className="w-2/3 md:w-full m-2" />
           <p className="pb-4 product-text">
           The most expensive 18.04-carat octagonal step-cut Colombian emerald.
           </p>
@@ -355,7 +355,7 @@ function App() {
         {/* 8th Product */}
         <div className="product flex flex-col items-center mt-10">
           <h1 className="product-title m-4 text-xl">Mercedes-Benz Maybach Exelero</h1>
-          <img src={Img8} alt="MB" className="w-full m-2" />
+          <img src={Img8} alt="MB" className="w-2/3 md:w-full m-2" />
           <p className="pb-4 product-text">
 One of the most expensive high-performance sports cars with top speed of 351 km/h.
           </p>
@@ -390,7 +390,7 @@ One of the most expensive high-performance sports cars with top speed of 351 km/
         {/* 9th Product */}
         <div className="product flex flex-col items-center mt-10">
           <h1 className="product-title m-4 text-xl">Odeon Tower Penthouse, Monaco</h1>
-          <img src={Img9} alt="ODEON" className="w-full m-2" />
+          <img src={Img9} alt="ODEON" className="w-2/3 md:w-full m-2" />
           <p className="pb-4 product-text-lg">
           The most expensive penthouses in the world with a health center, and its extreme luxury and services.
           </p>
@@ -423,7 +423,7 @@ One of the most expensive high-performance sports cars with top speed of 351 km/
         </div>
       </div>
 
-      <p className="pt-12 text-lg text-gray-400">
+      <p className="pt-12 text-base text-gray-400 mx-40">
         This project is just for fun and practice. It's a playful way to learn
         useState in React, style things up with Tailwind CSS, and set it all up
         with Vite. The products, prices, and everything else you see here are

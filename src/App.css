@@ -4,6 +4,9 @@
   max-width: 1620px;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 40px;
 }
 
@@ -11,12 +14,14 @@ body {
   font-family: "Rajdhani";
   background-color: #232323;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .product-title {
   height: 30px;
   width: 600px;
 }
+
 
 .product-text {
   height: 30px;
@@ -32,34 +37,6 @@ body {
   margin-top: 5px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
   justify-content: space-between;
 }
@@ -68,4 +45,10 @@ body {
   flex: 1 1 21%; /* Adjust the percentage to control the width */
   box-sizing: border-box;
   margin: 10px 0; /* Adjust margin as needed */
+}
+
+.product img {
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Fill container while maintaining aspect ratio */
+  transition: transform 0.2s ease; /* Smooth transition for zoom effect */
 }
