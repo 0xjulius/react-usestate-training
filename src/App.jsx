@@ -68,7 +68,7 @@ function App() {
           <h1 className="text-green-500 font-semibold p-4 text-3xl md:text-6xl lg:text-7xl">
             ${formatNumberWithCommas(totalDamage)}
           </h1>
-          <p className="text-center mx-20">
+          <p className="text-center mx-40">
             And your job is to bankrupt him by adding as many products as you
             can into his shopping cart.
           </p>
