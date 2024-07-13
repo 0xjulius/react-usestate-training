@@ -83,7 +83,7 @@ function App() {
         <p className="pt-4">with total of {totalProducts} products</p>
       </div>
 
-      <div className="card grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 xl:gap-x-10 text-center">
+      <div className="card2 grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 xl:gap-x-10 text-center">
         {/* 1st Product */}
         <div className="product flex flex-col items-center mt-10">
           <h1 className="product-title m-4 text-xl">
