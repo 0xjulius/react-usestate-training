@@ -47,6 +47,7 @@ function App() {
   const totalProducts =
     count1 + count2 + count3 + count4 + count5 + count6 + count7 + count8 + count9;
 
+    
   return (
     <>
       <div className="sticky-div top-0 z-10 bg-[#232323] flex justify-center items-center">
